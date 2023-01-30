@@ -1,0 +1,6 @@
+export default {
+  SECRET: 'manga.store',
+  CLOUDINARY_CLOUD_NAME: 'dz6225u4u',
+  CLOUDINARY_API_SECRET: 'SnxJr8Yqij3E1zPMcwsZFc9H7UE',
+  CLOUDINARY_API_KEY: '844911951612343'
+}
