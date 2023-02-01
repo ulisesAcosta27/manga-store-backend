@@ -1,5 +1,7 @@
+import dotenv from 'dotenv'
 import app from "./app.js";
 import './database.js'
+dotenv.config()
 
-app.listen(4000);
-console.log('Listen on port 4000')
+app.listen(process.env.PORT_SERVER);
+console.log('Server listening')

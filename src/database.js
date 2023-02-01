@@ -1,7 +1,14 @@
+import dotenv from 'dotenv'
 import mongoose from 'mongoose'
+dotenv.config()
 
-const mongoURI = "mongodb+srv://manga-store:54SuZCSSy26V3iim@cluster0.r7jyr.mongodb.net/?retryWrites=true&w=majority"
+const opciones = {
+  user: process.env.MONGODB_USER,
+  pass: process.env.MONGODB_PASSWORD,
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+};
 
-mongoose.connect(mongoURI)
+mongoose.connect(process.env.MONGODB_URI, opciones)
   .then(db => console.log('Db is connected'))
   .catch(error => console.log(error))
